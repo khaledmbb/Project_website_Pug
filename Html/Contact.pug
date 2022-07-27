@@ -1,0 +1,42 @@
+extends Home
+block Title
+  title  VixCon. | Contact
+block Sections
+  +small_landing('Contact', 'Contact', 'Contact')
+  .contact
+    .container.col-10
+      .row
+        .col-12.col-lg-6
+          .box
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3274.256216534073!2d5.786658815502519!3d34.849788882725974!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12f5a72c05e211cd%3A0x1d3ab7109ecd924e!2sBiskra!5e0!3m2!1sen!2sdz!4v1656082901854!5m2!1sen!2sdz" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        .col-12.col-lg-6.mt-4.mt-lg-0
+          .box
+            h2 Contact for any support!
+            p.sm Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur, natus.
+            form.pb-4
+              .row
+                .col-12.col-lg-6.col-md-6
+                  input(
+                    type='text',
+                    placeholder='Your Name',
+                  )
+                .col-12.col-lg-6.col-md-6
+                  input(
+                    type='email',
+                    placeholder='Your Email',
+                  )
+                .col-12.col-lg-6.col-md-6
+                  input(
+                    type='text',
+                    placeholder='Subject',
+                  )
+                .col-12.col-lg-6.col-md-6
+                  input(
+                    type='text',
+                    placeholder='Phone',
+                  )
+                .col-12
+                  textarea(
+                    placeholder='Message',
+                  )
+            +main_btn_4('send messages')

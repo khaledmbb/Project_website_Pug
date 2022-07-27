@@ -1,0 +1,69 @@
+//- Header Navigation Bar
+mixin navigation_bar
+  ul(class='list-unstyled ul-page d-flex align-items-center gap-4 text-uppercase fw-semibold m-0')
+    li(data-page='/html/dist/Home.html')
+      a(class='main-link' href='../dist/Home.html') home
+    li(data-page='/html/dist/Home.html')
+      a(class='main-link' href='../dist/About.html') about
+    .dropdown
+      li(class='dropdown-toggle' type="button" data-page='#'  id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false")
+        a(class='main-link' href='#') pages.
+        ul(class='dropdown-menu goUl' aria-labelledby="dropdownMenuButton1")
+          li(data-page='../dist/Price.html')
+            a(class='dropdown-item' href='../dist/Price.html') price
+          li(data-page='../dist/Login.html')
+            a(class='dropdown-item' href='../dist/Login.html') login
+          li(data-page='/Html/dist/Speakers.html')
+            a(class='dropdown-item lastLi' href='/Html/dist/Speakers.html') speakers
+    .dropdown
+      li(class='dropdown-toggle' data-page='#' type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false")
+        a(class='main-link' href='#') blogs.
+        ul(class='dropdown-menu goUl' aria-labelledby="dropdownMenuButton2")
+          li(data-page='../dist/Faq.html')
+            a(class='dropdown-item' href='../dist/Faq.html') f.a.q
+          li(data-page='../dist/Schedule.html')
+            a(class='dropdown-item' href='../dist/Contact.html') Schedule
+          li(data-page='../dist/Blog.html')
+            a(class='dropdown-item lastLi' href='Blog.html') big blog
+    li
+      a(class='main-link' href='Contact.html') contact
+//- Main Button
+mixin main_btn_1(text)
+  button(class='main-btn-1 btn rounded-pill')= text
+mixin main_btn_2(text)
+  button(class='main-btn-2 btn rounded-pill')= text
+mixin main_btn_3(text)
+  button(class='main-btn-3 btn rounded-pill')= text
+mixin main_btn_4(text)
+  button(class='main-btn-4 btn rounded-pill')= text
+mixin main_btn_5(text)
+  button(class='main-btn-5 btn rounded-pill')= text
+//- Main Title
+mixin main_title_1(text_1, text_2, text_3)
+  .main-title-1
+    h1.stroke= text_1
+    .title-text
+      h2= text_2
+      p.sm= text_3
+mixin main_title_2(text_1, text_2, text_3)
+  .main-title-2
+    h1.stroke= text_1
+    .title-text
+      h2= text_2
+      p.sm= text_3
+mixin main_title_3(text_1,text_2)
+  .main-title-3
+    h1.stroke= text_1
+    .title-text
+      h2= text_2
+//- Small Landing Page
+mixin small_landing(text_1, text_2,link)
+  .small-landing
+    .container.text-center
+      .box.text-center.pb-1
+        h1.pb-4= text_1
+        .link.d-flex.flex-row.align-items-center.justify-content-center
+          ul.list-unstyled.d-flex.justify-content-center.align-items-center.text-white.ul-page.m-0.pt-1
+            li(data-page='/Html/dist/Home.html') home
+            li(class='slash' data-page='#') /
+            li(data-page='/Html/dist/'+ link +'.html')= text_2

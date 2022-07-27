@@ -1,0 +1,117 @@
+.btn {
+  line-height: 1;
+  padding: 14px 32px;
+  box-shadow: 0 11px 22px #22222233;
+  transition: all .2s ease-in-out;
+  will-change: box-shadow;
+  font: {
+    size: 14px;
+    weight: $bold;
+  }
+  border-radius: 0px;
+  text-transform: uppercase;
+  border: 3px solid transparent;
+  font-weight: $bold;
+  color: white;
+  word-spacing: 3px;
+  letter-spacing: 2px;
+  &.main-btn-1 {
+    background-color: $blue;
+    &:hover {
+      border-color: $blue;
+      background-color: transparent;
+      color: $blue;
+    }
+    &:focus {
+      box-shadow: 0 11px 22px #2222221a;
+      border-color: $blue;
+      color: $blue;
+      background-color: transparent;
+    }
+  }
+  &.main-btn-2 {
+    background-color: $pink;
+    &:hover {
+      background-color: transparent;
+      border-color: $pink;
+      color: $pink;
+    }
+    &:focus {
+      color: $pink;
+      background-color: transparent;
+      box-shadow: 0 11px 22px #2222221a;
+      border-color: $pink;
+    }
+  }
+  &.main-btn-3 {
+    background-color: $blue;
+    &:hover {
+      background-color: $black;
+      border-color: $black;
+      color: white;
+    }
+    &:focus {
+      color: white;
+      background-color: $black;
+      box-shadow: 0 11px 22px #2222221a;
+      border-color: $black;
+    }
+  }
+  &.main-btn-4 {
+    background-color: $pink;
+    &:hover {
+      background-color: $black;
+      border-color: $black;
+      color: white;
+    }
+    &:focus {
+      background-color: $black;
+      box-shadow: 0 11px 22px #2222221a;
+      border-color: $black;
+      color: white;
+    }
+  }
+  &.main-btn-5 {
+    background-color: $black;
+    &:hover {
+      background-color: white;
+      border-color: $black;
+      color: $black;
+    }
+    &:focus {
+      background-color: white;
+      color: $black;
+      box-shadow: 0 11px 22px #2222221a;
+      border-color: $black;
+    }
+  }
+}
+.head-btn {
+  @include media(lg) {
+    display: none;
+  }
+  line-height: 1;
+  padding: 14px 32px;
+  box-shadow: 0 11px 22px #22222233;
+  transition: all .2s ease-in-out;
+  will-change: box-shadow;
+  font: {
+    size: 14px;
+    weight: $bold;
+  }
+  border-radius: 0px;
+  text-transform: uppercase;
+  border: 3px solid transparent;
+  font-weight: $bold;
+  color: white;
+  word-spacing: 3px;
+  letter-spacing: 2px;
+  &:hover {
+    color: $black;
+  }
+  background-color: $blue;
+  &:hover {
+    background: transparent; 
+    border: 3px solid $blue;
+  }
+}

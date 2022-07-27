@@ -1,0 +1,88 @@
+.speakers-2 {
+  background-color: #EEE;
+  .container {
+    padding-top: $paddingTop / 1.6; 
+    padding-bottom: $paddingTop / 1.6; 
+    .tank {
+      @each $img, $num in $eachImages {
+        &.tank-#{$num} {
+          .box-img {
+            background-image: url('#{$img}');
+          }
+        }
+      } 
+      padding-left: 20px;
+      padding-right: 20px;
+      .box-img {
+        background-position: 50% 50%;
+        background-size: cover;
+        height: 390px;
+        width: 100%;
+        border-radius: 5px;
+        overflow: hidden;
+        position: relative;
+        &:before {
+          @extend %before;
+          width: 100%;
+          height: 100%;
+          background-color: rgba(59, 29, 130, 0.5); 
+          @include opacity(0);
+          left: 0;
+          top: -50%;
+          transition: .3s ease;
+        }
+        .social-media {
+          transition: .2s ease;
+          @include opacity(0);
+          text-align: center;
+          position: absolute;
+          left: 50%;
+          transform: translateX(-50%);
+          bottom: 70px;
+          ul {
+            display: flex;
+            gap: 10px;
+            li {
+              a {
+                transition: .2s ease;
+                cursor: pointer;
+                background-color: $blue;
+                border-radius: 5px;
+                width: 50px;
+                height: 50px;
+                line-height: 50px;
+                text-align: center;
+                display: inline-block;
+                border-radius: 5px;
+                box-shadow: 0 15px 38px 0 #0000001a;
+                &:hover {
+                  background-color: $pink;
+                }
+                svg {
+                  color: white;
+                  font-size: 1rem;
+                }
+              }
+            }
+          }
+        }
+      }
+      &:hover {
+        ::before {
+          top: 0;
+          @include opacity(1);
+        }
+        .social-media {
+          @include opacity(1);
+        }
+      }
+      .descreption {
+        h5 {
+          padding: {
+            top: 10px;
+          }
+        }
+      }
+    }
+  }
+}

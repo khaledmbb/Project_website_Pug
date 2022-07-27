@@ -1,0 +1,150 @@
+header {
+  transition: 0.2s ease-in-out;
+  background-color: #ffffffd3;
+  z-index: 99;
+  .container {
+    padding: {
+      top: 20px;
+      bottom: 20px;
+    }
+    .nav {
+      ul {
+        li {
+          user-select: none;
+          .main-link {
+            transition: 0.2s;
+            font: {
+              size: $smallSize;
+              weight: $bold;
+            }
+            &:hover {
+              color: $blue;
+            }
+          }
+          &:nth-child(1),
+          &:nth-child(4) {
+            .main-link {
+              &:hover {
+                color: $pink;
+              }
+            }
+          }
+          .dropdown-menu {
+            border-radius: 1px;
+            border: none;
+            padding: 0;
+            margin-top: 27px !important;
+            background-color: #ffffffd3;
+            .dropdown-item {
+              transition: 0.2s;
+              border-bottom: 1px dotted rgba($black, 0.3);
+              font-size: 20px;
+              font-weight: $semibold;
+              text-transform: capitalize;
+              &:hover {
+                color: $pink;
+                border-left: 3px solid $pink;
+                background: transparent;
+              }
+              border-left: 3px solid transparent;
+            }
+            .lastLi {
+              border-bottom: none;
+            }
+          }
+          &::after {
+            display: none;
+          }
+        }
+      }
+    }
+    .bar {
+      border: none;
+      background: transparent;
+      svg {
+        color: $black;
+        font-size: 25px;
+        transition: 0.2s;
+      }
+      &:hover {
+        svg {
+          color: $pink;
+        }
+      }
+    }
+  }
+}
+.menu {
+  transition: 0.7s cubic-bezier(0.29, 0.88, 0.69, 0.35);
+  right: -100%;
+  top: 0;
+  height: 140vh;
+  position: fixed;
+  width: 100%;
+  background-color: white;
+  z-index: 99;
+  @include opacity(0.7);
+  .container {
+    padding-top: 20px;
+    background-color: white;
+    .head {
+      background-color: white;
+      .barExit {
+        cursor: pointer;
+        &:hover {
+          svg {
+            color: $pink;
+          }
+        }
+        svg {
+          font-size: 25px;
+          color: $black;
+          transition: 0.2s;
+        }
+      }
+    }
+    nav {
+      background-color: white;
+      ul {
+        li {
+          cursor: pointer;
+          background-color: transparent;
+          transition: 0.2s;
+          a {
+            transition: 0.2s;
+            color: $black;
+            font: {
+              weight: $bold;
+              size: $normalSize;
+            }
+          }
+          padding: {
+            top: 20px;
+            bottom: 20px;
+          }
+          &:hover {
+            a {
+              color: $pink;
+            }
+            border-left: 3px solid $pink;
+            border-right: 3px solid $pink;
+          }
+          border-left: 3px solid transparent;
+          border-right: 3px solid transparent;
+          text-align: center;
+          &:not(:last-child) {
+            border-bottom: 1px dotted rgba($black, 0.3);
+          }
+        }
+        .card-body {
+          border: none;
+        }
+      }
+    }
+  }
+  user-select: none;
+}
+.menu.show {
+  @include opacity(1);
+  right: 0;
+}

@@ -1,0 +1,12 @@
+.btn {
+  line-height: 1;
+  padding: 16px 32px;
+  box-shadow: 0 11px 22px #22222233;
+  transition: all 0.2s ease-in-out;
+  will-change: box-shadow;
+  font-size: 13px;
+  border-radius: 0px;
+  text-transform: uppercase;
+  border: 2px solid transparent;
+  font-weight: 700;
+}

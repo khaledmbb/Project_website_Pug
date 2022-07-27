@@ -1,0 +1,67 @@
+extends home
+block Title
+  title VixCon. | F.A.Q
+block Sections
+  +small_landing('F.A.Q', 'F.A.Q', 'Faq')
+  .faq
+    .container.col-10.col-xl-6
+      .text-box
+        h1(class='stoke-2' data-text='FAQ') FAQ
+        h2 frequently asked question
+        p.sm Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis fugit
+          | doloribus sunt sapiente, corrupti numquam, earum molestiae iure maxime
+          | in nostrum sit facilis nemo. Magnam quam voluptate consequatur inventore numquam?
+      .box.mt-5.pt-4
+        <div class="accordion" id="accordionPanelsStayOpenExample">
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="false" aria-controls="panelsStayOpen-collapseOne">
+                | 1. How to buy a Tickets
+              </button>
+            </h2>
+            <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
+              <div class="accordion-body">
+                p.sm Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore beatae eius incidunt repudiandae deserunt illum quaerat ipsum , consectetur adipisicing elit. Tempore beatae eius incidunt repudiandae deserunt illum quaerat ipsum rem odio, commodi rem odio, commodi.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="true" aria-controls="panelsStayOpen-collapseTwo">
+                | 2. Which payments method are avaliable?
+              </button>
+            </h2>
+            <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTwo">
+              <div class="accordion-body">
+                p.sm Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore beatae eius incidunt  , consectetur adipisicing elit. Tempore beatae eius incidunt repudiandae deserunt illum quaerat ipsum rem odio, commodirepudiandae deserunt illum quaerat ipsum rem odio, commodi.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="panelsStayOpen-headingThree">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
+                | 3. Is refund is avalaible for valid reason?
+              </button>
+            </h2>
+            <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingThree">
+              <div class="accordion-body">
+                p.sm Lorem ipsum dolor sit amet, consectetur , consectetur adipisicing elit. Tempore beatae eius incidunt repudiandae deserunt illum quaerat ipsum rem odio, commodi adipisicing elit. Tempore beatae eius incidunt repudiandae deserunt illum quaerat ipsum rem odio, commodi.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="panelsStayOpen-headingFour">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFour" aria-expanded="true" aria-controls="panelsStayOpen-collapseFour">
+                | 4. When i wil have to reach?
+              </button>
+            </h2>
+            <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingFour">
+              <div class="accordion-body">
+                p.sm Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore beatae eius incidunt repudiandae deserunt illum quaerat ipsum , consectetur adipisicing elit. Tempore beatae eius incidunt repudiandae deserunt illum quaerat ipsum rem odio, commodi rem odio, commodi.
+              </div>
+            </div>
+          </div>
+        </div>
+        .text-box-1
+          h4 Need Any further Support?
+          +main_btn_4('contact us')

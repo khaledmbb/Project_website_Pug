@@ -1,0 +1,140 @@
+//- Main Title Of Sections
+.main-title-1,.main-title-2, .main-title-3 {
+  overflow: hidden;
+  padding-bottom: $paddingTop / 2;
+  .stroke {
+    font: {
+      size: $paddingTop - 1rem;
+      weight: 900;
+      family: 'Poppins', sans-serif !important;
+    }
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 2px #ddd;
+    text-transform: uppercase;
+    @include media(md) {
+      font-size: $paddingTop - 2.7rem;
+    }
+    @include media(sm) {
+      font-size: $paddingTop - 3.8rem;
+    }
+    @include media(xs) {
+      font-size: $paddingTop - 4.6rem;
+    }
+  }
+  .title-text {
+    padding-left: 160px;
+    @include media(sm) {
+      padding-left: 100px;
+    }
+    position: relative;
+    &:before {
+      @extend %before;
+      width: 134px;
+      @include media(sm) {
+        width: 74px;
+      }
+      height: 5px;
+      top: 27px;
+      left: 0;
+    }
+    h2 {
+      font-weight: 700; 
+      @include media(xs) {
+        font-size: 24px;
+      }
+    }
+    p {
+      max-width: 400px;
+      font-size: $normalSize;
+    }
+  }
+}
+.main-title-2, .main-title-3 {
+  .title-text {
+    &:before {
+      background-color: $pink;
+    }
+  }
+}
+.main-title-3 {
+  .title-text {
+    h2 {
+      color: white;
+    }
+  }
+}
+.main-title-1 {
+  .title-text {
+    &:before {
+      background-color: $blue;
+    }
+  }
+}
+.main-title-2 {
+  .title-text {
+    h2 {
+      color: white;
+    }
+    p {
+      color: rgba(white, .7);
+    }
+  }
+}
+.stoke-2 {
+  margin: 0;
+  font: {
+    size: 5.5rem;
+    weight: 900;
+    family: 'Poppins', sans-serif !important;
+  }
+  -webkit-text-fill-color: white;
+  -webkit-text-stroke: 2px #ddd;
+  text-transform: uppercase;
+  position: relative;
+  width: fit-content;
+  &:before {
+    content: attr(data-text);
+    position: absolute;
+    left: 0;
+    top: 0;
+    -webkit-text-fill-color: $blue;
+    overflow: hidden;
+    width: 0;
+    transition: 0.6s ease-in-out;
+  }
+  &:hover::before {
+    width: 28%;
+  }
+  @include media(xs) {
+    font-size: 4rem;
+  }
+}
+.stoke-1 {
+  margin: 0;
+  font: {
+    size: 5.5rem;
+    weight: 900;
+    family: 'Poppins', sans-serif !important;
+  }
+  -webkit-text-fill-color: white;
+  -webkit-text-stroke: 2px #ddd;
+  text-transform: uppercase;
+  position: relative;
+  width: fit-content;
+  &:before {
+    content: attr(data-text);
+    position: absolute;
+    left: 0;
+    top: 0;
+    -webkit-text-fill-color: $pink;
+    overflow: hidden;
+    width: 0;
+    transition: 0.6s ease-in-out;
+  }
+  &:hover::before {
+    width: 58%;
+  }
+  @include media(xs) {
+    font-size: 4rem;
+  }
+}

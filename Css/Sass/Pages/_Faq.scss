@@ -1,0 +1,32 @@
+.faq {
+  margin-top: $marginTop;
+  margin-bottom: $marginTop;
+  .container {
+    .box {
+      .accordion-item {
+        border-radius: 1px;
+        .accordion-button {
+          background-color: #EEE;
+          color: $black;
+          border-radius: 1px;
+          font-weight: $bold - 200;
+          &:hover {
+            color: $blue;
+          }
+          &:focus {
+            box-shadow: none;
+            color: $blue;
+          }
+        }
+      }
+    }
+    .text-box-1 {
+      padding-top: 40px;
+      h4 {
+        font-weight: $bold - 200;
+        font-size: 30px;
+        padding-bottom: 10px;
+      }
+    }
+  }
+}

@@ -1,0 +1,47 @@
+//- Header
+header.position-sticky.top-0
+  div(class='container d-flex justify-content-between align-items-center')
+    .logo
+      img(class='img-fluid' src='https://demo.themefisher.com/vixcon/images/logo.png')
+    .nav.d-none.d-lg-block
+      +navigation_bar
+    //- +main_btn_1('get ticket')
+    button(class='head-btn rounded-pill') get ticket
+    button(class='bar d-lg-none position-relative')
+      i.fa-solid.fa-bars
+div(class='menu d-lg-none')
+  .container
+    div(class='head d-flex justify-content-between align-items-center')
+      img(class='img-fluid' src='https://demo.themefisher.com/vixcon/images/logo.png')
+      .barExit
+        i.fa-solid.fa-x
+    nav.mt-5
+      ul.list-unstyled.ul-page
+        li(data-page='/Html/dist/Home.html')
+          a(href='/Html/dist/Home.html') Home
+        li(data-page='/Html/dist/About.html')
+          a(href='../dist/About.html') about
+        li(data-bs-toggle="collapse" data-page='#' data-bs-target="#collapseExample1" aria-expanded="false" aria-controls="collapseExample")
+          a(href='#') pages.
+        div(class='collapse' id='collapseExample1')
+          div.card.card-body
+            ul.list-unstyled
+              li(data-page='/Html/dist/Login.html')
+                a(href='../dist/Login.html') login
+              li(data-page='/Html/dist/Price.html')
+                a(href='../dist/Price.html') price
+              li(data-page='/Html/dist/Speakers.html')
+                a(href='../dist/Speakers.html' class='lastLi') speakers
+        li(data-bs-toggle="collapse" data-page='#' data-bs-target="#collapseExample2" aria-expanded="false" aria-controls="collapseExample")
+          a(href='#') blogs.
+        div(class='collapse' id='collapseExample2')
+          div.card.card-body
+            ul.list-unstyled
+              li(data-page='/Html/dist/Faq.html')
+                a(href='../dist/Faq.html') f.a.q
+              li(data-page='/Html/dist/Schedule.html')
+                a(href='../dist/Schedule.html') Schedule
+              li(data-page='/Html/dist/Blog.html')
+                a(href='../dist/Blog.html' class='lastLi') Big blog
+        li(data-page='/Html/dist/Contact.html')
+          a(href='#') Contact

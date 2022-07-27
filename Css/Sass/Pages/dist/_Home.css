@@ -1,0 +1,6 @@
+.landing {
+  background-image: url("https://demo.themefisher.com/vixcon/images/banner/banner-2.jpg");
+  background-size: cover;
+  background-position: 65% 50%;
+  height: calc(100vh - 86px);
+}

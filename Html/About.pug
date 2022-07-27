@@ -1,0 +1,69 @@
+extends Home
+block Title
+  title VixCon. | About
+block Sections
+  +small_landing('About', 'About', 'About')
+  .about
+    .container.col-10
+      .row
+        .col-12
+          .box
+            img(class='img-fluid' src='	https://demo.themefisher.com/vixcon/images/bg/ctg.jpg' alt='This Is Image')
+      .row.mt-5
+        .col-12.col-lg-6
+          .box
+            h1 #[span About Us] &amp; Inspiration Connect People
+        .col-12.col-lg-6
+          .box
+            p.sm The Event Company is an event design and production company that specializes 
+              | in corporate and social events as well as non-profit fundraisers. We consider ourselves
+              | experts when it comes to event fundraising and public/media
+              | relations and offer consultation services to our clients to help make their event a sensational
+              | success.
+  .sponsors
+    .container.col-10
+      +main_title_3('Sponsors', 'Amazing Partners & Sponsors')
+      .tank.tank-1
+        h6.text-uppercase.pb-4 gold sponsors
+        ul.list-unstyled.pb-4
+          each img in ['https://demo.themefisher.com/vixcon/images/clients/client-img-1.png', 'https://demo.themefisher.com/vixcon/images/clients/client-img-2.png', 'https://demo.themefisher.com/vixcon/images/clients/client-img-3.png', 'https://demo.themefisher.com/vixcon/images/clients/client-img-4.png', 'https://demo.themefisher.com/vixcon/images/clients/client-img-5.png']
+            li #[img(src=img class='img-fluid')]
+      .tank.tank-2.pb-2
+        h6.text-uppercase.pb-4.pt-5 platinum sponsors
+        ul.list-unstyled
+          each imgs in ['https://demo.themefisher.com/vixcon/images/clients/client-img-5.png', 'https://demo.themefisher.com/vixcon/images/clients/client-img-6.png', 'https://demo.themefisher.com/vixcon/images/clients/client-img-2.png', 'https://demo.themefisher.com/vixcon/images/clients/client-img-1.png', 'https://demo.themefisher.com/vixcon/images/clients/client-img-3.png', 'https://demo.themefisher.com/vixcon/images/clients/client-img-2.png','https://demo.themefisher.com/vixcon/images/clients/client-img-7.png','https://demo.themefisher.com/vixcon/images/clients/client-img-8.png','https://demo.themefisher.com/vixcon/images/clients/client-img-9.png']
+            li #[img(src=imgs class='img-fluid')]
+      h4.pt-4.pb-3.text-white want to be a sponsor?
+      +main_btn_2('aplly now')
+  .ticket-about
+    .container.col-10
+      .row.align-items-center
+        .col-12.col-xl-6
+          .box-1
+            p 10% Sale offer for early birds
+            h2 meet top for all poeple who #[span digital masters] 
+              | & influencers in a unique #[span 3-days] experience.
+            +main_btn_4('get ticket')
+        .col-12.col-xl-6
+          .box-2
+            .row
+              .col-12.col-lg-6
+                .tank.tank-1
+                  i.fa-solid.fa-microphone
+                  h4(class='pb-4 pt-3') Valuable Insight
+                  p.sm Starting a mentoring program might be the closest you'll ever get.
+              .col-12.col-lg-6
+                .tank.tank-2
+                  i.fa-solid.fa-earth-africa
+                  h4(class='pb-4 pt-3') Global Audience
+                  p.sm Starting a mentoring program might be the closest you'll ever get.
+              .col-12.col-lg-6
+                .tank.tank-3
+                  i.fa-solid.fa-share
+                  h4(class='pb-4 pt-3') Valuable Insight
+                  p.sm Starting a mentoring program might be the closest you'll ever get.
+              .col-12.col-lg-6
+                .tank.tank-4
+                  i.fa-solid.fa-audio-description
+                  h4(class='pb-4 pt-3') ADS Of producs
+                  p.sm Starting a mentoring program might be the closest you'll ever get.

@@ -1,0 +1,90 @@
+footer {
+  background-image: url('https://demo.themefisher.com/vixcon/images/bg/footer-bg.jpg');
+  background-position: 50% 50%;
+  background-attachment: fixed;
+  background-size: cover;
+  padding-top: $paddingTop / 2;
+
+  .container {
+    padding-top: $paddingTop / 2;
+    .box {
+      h2 {
+        color: white;
+        font-size: 30px;
+        font-weight: $bold - 200;
+        padding-bottom: 18px;
+      }
+
+      &:nth-child(1) {
+        max-width: 400px;
+
+        @include media(lg) {
+          max-width: 100%;
+        }
+      }
+
+      .phone span,
+      .email span {
+        color: $black;
+        cursor: pointer;
+        font-weight: 500;
+      }
+
+      .phone,
+      .email {
+        margin: 0;
+        font-size: 19px;
+      }
+
+      ul {
+        li {
+          color: white;
+          font-size: 20px;
+          font-weight: $bold - 300;
+          transition: .2s;
+          cursor: pointer;
+
+          &:hover {
+            text-decoration: underline;
+            color: $pink;
+          }
+        }
+      }
+    }
+    .social-media {
+      margin-top: 30px;
+      padding-bottom: $paddingTop / 4.5;
+      ul {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+        gap: 10px;
+        li {
+          cursor: pointer;
+          &:hover {
+            background-color: $pink;
+          }
+          transition: .2s ease;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 12px;
+          background-color: $blue;
+        }
+      }
+    }
+    .end {
+      padding-top: $paddingTop / 3;
+      padding-bottom: $paddingTop / 3;
+      border-top: 1px solid #ffffff0a;
+      h5 {
+        font-size: 20px;
+        font-weight: $bold - 400;
+        color: white;
+        svg {
+          color: $pink;
+        }
+      }
+    }
+  }
+}

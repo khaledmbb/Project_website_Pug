@@ -1,0 +1,33 @@
+extends home
+block Title
+  title VixCon. | login
+block Sections
+  +small_landing('Login', 'Login', 'Login')
+  .login
+    .container.col-10
+      .row.align-items-center
+        .col-12.col-lg-6
+          .box
+            img(class='img-fluid' src='https://demo.themefisher.com/vixcon/images/about/login.jpg')
+        .col-12.col-lg-6.mt-4.mt-lg-0.d
+          .box
+            h2 login
+            p.sm don't have an account? #[span create an account]
+            form.pb-4
+              .row
+                .col-12
+                  .text.mt-3
+                    p.sm Enter Username
+                  input(
+                    type='text',
+                    placeholder='Your Username',
+                  )
+                .col-12
+                  .text.d-flex.align-items-center.justify-content-between.mt-3
+                    p.sm Enter Password
+                    p.sm Forget Password?
+                  input(
+                    type='password',
+                    placeholder='Enter Password',
+                  )
+            +main_btn_4('Login')

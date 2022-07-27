@@ -1,0 +1,58 @@
+.contact {
+  margin-top: $marginTop;
+  margin-bottom: $marginTop;
+  .container {
+    .box {
+      overflow: hidden;
+      padding-left: 30px;
+      padding-right: 30px;
+      iframe {
+        width: 700px;
+        height: 500px;
+      }
+      form {
+        input {
+          &::placeholder {
+            font-size: 17px;
+          }
+          margin-bottom: 15px;
+          border: 1px solid #e8e8e8;
+          height: 50px;
+          padding-left: 20px;
+          border-radius: 2px;
+          width: 100%;
+          font-size: 13px;
+          background: #eee;
+          transition: .2s;
+          &:hover {
+            border-color: $pink;
+          }
+          &:focus {
+            outline: none;
+            background-color: white;
+          }
+        }
+        textarea {
+          &:focus {
+            background-color: white;
+            outline: none;
+          }
+          &::placeholder {
+            font-size: 17px;
+          }
+          transition: .2s;
+          border-radius: 2px;
+          width: 100%;
+          border-color: #e8e8e8;
+          height: 150px;
+          padding-left: 20px;
+          font-size: 13px;
+          background: #eee;
+          &:hover {
+            border-color: $blue;
+          }
+        }
+      }
+    }
+  }
+}

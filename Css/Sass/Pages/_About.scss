@@ -1,0 +1,88 @@
+.about {
+  margin-top: $paddingTop / 1.5;
+  margin-bottom: $paddingTop / 1.5;
+  .container {
+    .box {
+      border-radius: 1px;
+      h1 {
+        span {
+          color: $pink;
+        }
+      }
+    }
+  }
+}
+.ticket-about {
+  margin-top: $marginTop + 1rem;
+  margin-bottom: $marginTop + 1.5rem;
+  .container {
+    .box-1 {
+      p {
+        color: $black;
+        font: {
+          size: larger;
+          weight: lighter;
+        }
+      }
+      h2 {
+        max-width: 90%;
+        @include media(xl) {
+          max-width: 100%;
+        }
+        span {
+          color: $pink;
+        }
+        margin-bottom: 20px;
+      }
+    }
+    .box-2 {
+      @include media(xl) {
+        margin-top: $paddingTop / 1.8;
+      }
+      @include media(lg) {
+        margin-top: $paddingTop / 4;
+      }
+      .tank {
+        border-radius: 1px;
+        h4 {
+          font-weight: 500;
+          color: white;
+        }
+        &.tank-1 {
+          transform: translateY(20px);
+          background-color: #17a2b8;
+        }
+        &.tank-2 {
+          background-color: #343a40;
+          @include media(lg) {
+            margin-top: 80px;
+          }
+          transform: translateY(-20px);
+        }
+        &.tank-3 {
+          background-color: #ff4747;
+          transform: translateY(60px);
+          @include media(lg) {
+            margin-top: -40px;
+          }
+        }
+        &.tank-4 {
+          background-color: $blue;
+          transform: translateY(20px);
+          @include media(lg) {
+            margin-top: 80px;
+          }
+        }
+        transition: 0.3s;
+        padding: 40px;
+        p {
+          color: white;
+        }
+        svg {
+          color: white;
+          font-size: 2.5rem;
+        }
+      }
+    }
+  }
+}

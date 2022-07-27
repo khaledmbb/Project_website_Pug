@@ -1,0 +1,62 @@
+// Transition
+@mixin transition($par...) {
+  -webkit-transition: $par;
+  -moz-transition: $par;
+  -o-transition: $par;
+  transition: $par;
+}
+
+// Opacity
+@mixin opacity($value) {
+  zoom: 1;
+  $opacity: $value * 100;
+  filter: alpha(opacity = $opacity);
+  opacity: $value;
+}
+
+// Animation
+@mixin animation($animation-name) {
+  @-webkit-keyframes #{$animation-name} {
+    @content;
+  }
+  @-moz-keyframes #{$animation-name} {
+    @content;
+  }
+  @keyframes #{$animation-name} {
+    @content;
+  }
+}
+
+// Media Query
+@mixin media($media-size) {
+  @if $media-size == 'xs' {
+    @media (max-width: 450px) {
+      @content;
+    }
+  } @else if $media-size == 'sm' {
+    @media (max-width: 576px) {
+      @content;
+    }
+  } @else if $media-size == 'md' {
+    @media (max-width: 768px) {
+      @content;
+    }
+  } @else if $media-size == 'lg' {
+    @media (max-width: 992px) {
+      @content;
+    }
+  } @else if $media-size == 'xl' {
+    @media (max-width: 1200px) {
+      @content;
+    }
+  } @else if $media-size == 'xxl' {
+    @media (max-width: 1400px) {
+      @content;
+    }
+  }
+}
+
+%before {
+  content: '';
+  position: absolute;
+}

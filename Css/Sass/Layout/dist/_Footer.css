@@ -1,0 +1,7 @@
+footer {
+  background-image: url("https://demo.themefisher.com/vixcon/images/bg/footer-bg.jpg") no-repeat fixed 50% 50%;
+  background-size: cover;
+}
+footer .container .box ul li {
+  font-size: 20px;
+}

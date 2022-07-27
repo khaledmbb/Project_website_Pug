@@ -1,0 +1,79 @@
+extends home
+block Title
+  title VixCon. | price
+block Sections
+  +small_landing('Price', 'Price', 'Price')
+  .counter
+    .container.col-10
+      .row.align-items-center
+        .col-12.col-lg-6
+          .box
+            h2.pink count the day
+            h2 until conference start
+            p Our intensive 2-day business conferences will teach you the specific steps and proven systems you need to implement and grow your business. We hope you'll join us!
+        .col-12.col-lg-6.mt-3.mt-lg-0
+          .box
+            ul.list-unstyled.d-flex.gap-3.align-items-center
+              each time in ['days', 'hours', 'minutes', 'secondes']
+                li(class=time+' rounded-pill')
+  .price
+    .container.col-10
+      +main_title_2('price', 'get your ticket', 'Accusantium provident suscipit dicta magni dolor deserunt nam obcaecati non veritatis optio.')
+      .row.align-items-center.justify-content-center
+        .col-12.col-md-6.col-xl-4
+          .box.box-1.text-center
+            .head-of-box.pt-4.pb-4
+              i.fa-solid.fa-award
+              h1 70$
+            ul.list-unstyled.text-center
+              li two days ticket
+              li coffee & launch
+              li networking
+              li certificate
+              li gift box
+              li company listing
+              li dinner serve
+              li email listing
+            +main_btn_2('get now')
+        .col-12.col-md-6.col-xl-4.pt-5.pt-md-0
+          .box.box-2.text-center
+            .head-of-box.pt-4.pb-4
+              i.fa-solid.fa-tag
+              h1 120$
+            ul.list-unstyled.text-center
+              li two days ticket
+              li coffee & launch
+              li networking
+              li certificate
+              li gift box
+              li company listing
+              li dinner serve
+            +main_btn_5('get now')
+        .col-12.col-md-6.col-xl-4.pt-5.pt-xl-0
+          .box.box-3.text-center
+            .head-of-box.pt-4.pb-4
+              i.fa-solid.fa-money-bill-wave
+              h1 270$
+            ul.list-unstyled.text-center
+              li two days ticket
+              li coffee & launch
+              li networking
+              li certificate
+              li gift box
+              li company listing
+            +main_btn_3('get now')
+  .event
+    .container.col-10
+      .row
+        .col-12.col-lg-5.ma
+          .box-img.position-relative
+            img(class='img-fluid' alt='This Is An Image' src='https://demo.themefisher.com/vixcon/images/bg/cta-bg.jpg')
+            img(class='img-fluid' alt='This Is An Image' src='https://demo.themefisher.com/vixcon/images/about/main-home-img-1.jpg')
+        .col-12.col-lg-7.ma
+          .box-2
+            h1(class='stoke-1' data-text='EVENT') event
+            .text-box
+              h1 The New Era of Tech Companies
+              p.sm Lorem ipsum proin gravida nibh vel velit auctor aliquet. Aeneansollicitudin, lorem quis bibendum auctonisi elit consequat ipsum nec sagittis sem nibh id elit. Duis sed odio
+                | sit amet nibh vulputate cursusa sit nibh vel velit.
+              +main_btn_3('discover more')

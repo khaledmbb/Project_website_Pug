@@ -1,0 +1,432 @@
+include Helpers/Variables
+include Helpers/Mixin
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible' content='IE=edge')
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    block Title
+      title VixCon.
+    include Helpers/CssLinks
+  body
+    .preloaded
+      .circle-1.rounded-circle
+      .circle-2.rounded-circle
+      .circle-3.rounded-circle
+      .circle-4.rounded-circle
+    .go-up
+      .icon.rounded-pill
+        i.fa-solid.fa-angle-up
+    include ./Layout/Header
+    block Sections
+      .landing
+        .container.col-10
+          p november 20, at 10:00am
+          h1 the feature
+          h1 & tech expo
+          +main_btn_2('discover more')
+      .counter
+        .container.col-10
+          .row.align-items-center
+            .col-12.col-lg-6
+              .box
+                h2.pink count the day
+                h2 until conference start
+                p Our intensive 2-day business conferences will teach you the specific steps and proven systems you need to implement and grow your business. We hope you'll join us!
+            .col-12.col-lg-6.mt-3.mt-lg-0
+              .box
+                ul.list-unstyled.d-flex.align-items-center
+                  each time in ['days', 'hours', 'minutes', 'secondes']
+                    li(class=time+' rounded-pill')
+      .event
+        .container.col-10
+          .row
+            .col-12.col-lg-5.ma
+              .box-img.position-relative
+                img(class='img-fluid' alt='This Is An Image' src='https://demo.themefisher.com/vixcon/images/bg/cta-bg.jpg')
+                img(class='img-fluid' alt='This Is An Image' src='https://demo.themefisher.com/vixcon/images/about/main-home-img-1.jpg')
+            .col-12.col-lg-7.ma
+              .box-2
+                h1(class='stoke-1' data-text='EVENT') event
+                .text-box
+                  h1 The New Era of Tech Companies
+                  p.sm Lorem ipsum proin gravida nibh vel velit auctor aliquet. Aeneansollicitudin, lorem quis bibendum auctonisi elit consequat ipsum nec sagittis sem nibh id elit. Duis sed odio
+                    | sit amet nibh vulputate cursusa sit nibh vel velit.
+                  +main_btn_3('discover more')
+      .ticket
+        .container.col-10
+          .row.align-items-center
+            .col-12.col-lg-7
+              .box-1
+                p 10% Sale offer for early birds
+                h2 meet top for all poeple who #[span digital masters] 
+                  | & influencers in a unique #[span 3-days] experience.
+                +main_btn_4('get ticket')
+            .col-5.d-none.d-lg-block
+              .box-2
+                .box-img
+                  img(class='img-fluid',
+                    src='https://demo.themefisher.com/vixcon/images/banner/rev-slider-09.png')
+            .col-12.b-2
+              .row
+                .col-12.col-md-6.col-xl-4
+                  .tank.tank-1
+                    i.fa-solid.fa-microphone
+                    h4(class='pb-4 pt-3') Valuable Insight
+                    p.sm Events Drinks and Dancing are hosting 
+                      | an After Party and YOU ARE INVITED!!
+                .col-12.col-md-6.col-xl-4
+                  .tank.tank-2
+                    i.fa-solid.fa-earth-africa
+                    h4(class='pb-4 pt-3') Global Audience
+                    p.sm Starting a mentoring program might be the
+                      | closest you'll ever get to making a business decision that has exclusively positive impact.
+                .col-12.col-md-6.col-xl-4
+                  .tank.tank-3
+                    i.fa-solid.fa-share
+                    h4(class='pb-4 pt-3') Great Community
+                    p.sm Networking is the exchange of information and ideas among people with a common profession
+                      | or special interest, usually in an informal social setting.
+      .schedule
+        .container.col-10
+          +main_title_1('schedule', 'topic discussion', 'Accusantium provident suscipit dicta magni dolor deserunt nam obcaecati non veritatis optio.')
+          .shuffle
+            ul.list-unstyled
+              li(data-display='.topic-1')
+                h2 day 1
+                p.sm 13 nov, 2022 [08.00pm-18.00am]
+              li(class='active' data-display='.topic-2')
+                h2 day 2
+                p.sm 07 april, 2019 [14.00pm-16.00am]
+              li(data-display='.topic-3')
+                h2 day 3
+                p.sm 28 may, 2018 [20.00pm-23.00am]
+          .topics
+            .topic-1
+              ul
+                li
+                  .date
+                    h4 9.00am
+                  .text
+                    h3 Introduction of material Design
+                    p Doloribus veritatis, placeat, laborum amet
+                      | voluptates cupiditate sapiente, reiciendis nemo recusandae quo mollitial.
+                  .sm-img
+                    img(class='rounded-circle' src='https://picsum.photos/80/80?random=1')
+                li
+                  .date
+                    h4 12.00am
+                  .text
+                    h3 markting matter in Design pettern
+                    p Doloribus veritatis, placeat, laborum amet
+                      | voluptates cupiditate sapiente, reiciendis nemo recusandae quo mollitial.
+                  .sm-img
+                    img(class='rounded-circle' src='https://picsum.photos/80/80?random=2')
+                li
+                  .date
+                    h4 4.00am
+                  .text
+                    h3 Cultures of Creativity
+                    p Doloribus veritatis, placeat, laborum amet
+                      | voluptates cupiditate sapiente, reiciendis nemo recusandae quo mollitial.
+                  .sm-img
+                    img(class='rounded-circle' src='https://picsum.photos/80/80?random=3')
+                li
+                  .date
+                    h4 22.00am
+                  .text
+                    h3 launch break
+                    p Doloribus veritatis, placeat, laborum amet
+                      | voluptates cupiditate sapiente, reiciendis nemo recusandae quo mollitial.
+                  .sm-img
+                    img(class='rounded-circle' src='https://picsum.photos/80/80?random=4')
+            .topic-2.topic-show
+              ul
+                li
+                  .date
+                    h4 8.00am
+                  .text
+                    h3 make our cleints happy with ? 
+                    p Doloribus veritatis, placeat, laborum amet
+                      | voluptates cupiditate sapiente, reiciendis nemo recusandae quo mollitial.
+                  .sm-img
+                    img(class='rounded-circle' src='https://picsum.photos/80/80?random=5')
+                li
+                  .date
+                    h4 13.00am
+                  .text
+                    h3 supermarket include everything!
+                    p Doloribus veritatis, placeat, laborum amet
+                      | voluptates cupiditate sapiente, reiciendis nemo recusandae quo mollitial.
+                  .sm-img
+                    img(class='rounded-circle' src='https://picsum.photos/80/80?random=6')
+                li
+                  .date
+                    h4 23.00am
+                  .text
+                    h3 animal mesuam
+                    p Doloribus veritatis, placeat, laborum amet
+                      | voluptates cupiditate sapiente, reiciendis nemo recusandae quo mollitial.
+                  .sm-img
+                    img(class='rounded-circle' src='https://picsum.photos/80/80?random=7')
+                li
+                  .date
+                    h4 11.00am
+                  .text
+                    h3 breakpoint
+                    p Doloribus veritatis, placeat, laborum amet
+                      | voluptates cupiditate sapiente, reiciendis nemo recusandae quo mollitial.
+                  .sm-img
+                    img(class='rounded-circle' src='https://picsum.photos/80/80?random=8')
+            .topic-3
+              ul
+                li
+                  .date
+                    h4 9.00am
+                  .text
+                    h3 Introduction of material Design
+                    p Doloribus veritatis, placeat, laborum amet
+                      | voluptates cupiditate sapiente, reiciendis nemo recusandae quo mollitial.
+                  .sm-img
+                    img(class='rounded-circle' src='https://picsum.photos/80/80?random=9')
+                li
+                  .date
+                    h4 12.00am
+                  .text
+                    h3 markting matter in Design pettern
+                    p Doloribus veritatis, placeat, laborum amet
+                      | voluptates cupiditate sapiente, reiciendis nemo recusandae quo mollitial.
+                  .sm-img
+                    img(class='rounded-circle' src='https://picsum.photos/80/80?random=10')
+                li
+                  .date
+                    h4 9.00am
+                  .text
+                    h3 Cultures of Creativity
+                    p Doloribus veritatis, placeat, laborum amet
+                      | voluptates cupiditate sapiente, reiciendis nemo recusandae quo mollitial.
+                  .sm-img
+                    img(class='rounded-circle' src='https://picsum.photos/80/80?random=11')
+                li
+                  .date
+                    h4 9.00am
+                  .text
+                    h3 launch break
+                    p Doloribus veritatis, placeat, laborum amet
+                      | voluptates cupiditate sapiente, reiciendis nemo recusandae quo mollitial.
+                  .sm-img
+                    img(class='rounded-circle' src='https://picsum.photos/80/80?random=12')
+      .price
+        .container.col-10
+          +main_title_2('price', 'get your ticket', 'Accusantium provident suscipit dicta magni dolor deserunt nam obcaecati non veritatis optio.')
+          .row.align-items-center.justify-content-center
+            .col-12.col-md-6.col-xl-4
+              .box.box-1.text-center
+                .head-of-box.pt-4.pb-4
+                  i.fa-solid.fa-award
+                  h1 70$
+                ul.list-unstyled.text-center
+                  li two days ticket
+                  li coffee & launch
+                  li networking
+                  li certificate
+                  li gift box
+                  li company listing
+                  li dinner serve
+                  li email listing
+                +main_btn_2('get now')
+            .col-12.col-md-6.col-xl-4.pt-5.pt-md-0
+              .box.box-2.text-center
+                .head-of-box.pt-4.pb-4
+                  i.fa-solid.fa-tag
+                  h1 120$
+                ul.list-unstyled.text-center
+                  li two days ticket
+                  li coffee & launch
+                  li networking
+                  li certificate
+                  li gift box
+                  li company listing
+                  li dinner serve
+                +main_btn_5('get now')
+            .col-12.col-md-6.col-xl-4.pt-5.pt-xl-0
+              .box.box-3.text-center
+                .head-of-box.pt-4.pb-4
+                  i.fa-solid.fa-money-bill-wave
+                  h1 270$
+                ul.list-unstyled.text-center
+                  li two days ticket
+                  li coffee & launch
+                  li networking
+                  li certificate
+                  li gift box
+                  li company listing
+                +main_btn_3('get now')
+      .speakers
+        .container.col-10
+          +main_title_1('speakers', "who're speakering", 'Accusantium provident suscipit dicta magni dolor deserunt nam obcaecati non veritatis optio.')
+          .row
+            .col-12.col-md-6.col-xl-4
+              .tank.tank-1
+                .box-img
+                  .social-media
+                    ul.list-unstyled
+                      li 
+                        a(href='https://www.facebook.com') #[i.fa-brands.fa-facebook]
+                      li 
+                        a(href='https://www.instagram.com') #[i.fa-brands.fa-instagram]
+                      li
+                        a(href='https://www.twitter.com') #[i.fa-brands.fa-twitter]
+                .descreption
+                  h5 joe marten
+                  p.sm Software Engeneering
+            .col-12.col-md-6.col-xl-4
+              .tank.tank-2
+                .box-img
+                  .social-media
+                    ul.list-unstyled
+                      li 
+                        a(href='https://www.facebook.com') #[i.fa-brands.fa-facebook]
+                      li 
+                        a(href='https://www.instagram.com') #[i.fa-brands.fa-instagram]
+                      li
+                        a(href='https://www.twitter.com') #[i.fa-brands.fa-twitter]
+                .descreption
+                  h5 Abo Hlal
+                  p.sm PHP Developer
+            .col-12.col-md-6.col-xl-4
+              .tank.tank-3
+                .box-img
+                  .social-media
+                    ul.list-unstyled
+                      li 
+                        a(href='https://www.facebook.com') #[i.fa-brands.fa-facebook]
+                      li 
+                        a(href='https://www.instagram.com') #[i.fa-brands.fa-instagram]
+                      li
+                        a(href='https://www.twitter.com') #[i.fa-brands.fa-twitter]
+                .descreption
+                  h5 hatab marcos
+                  p.sm UI design
+            .col-12.col-md-6.col-xl-4
+              .tank.tank-4
+                .box-img
+                  .social-media
+                    ul.list-unstyled
+                      li 
+                        a(href='https://www.facebook.com') #[i.fa-brands.fa-facebook]
+                      li 
+                        a(href='https://www.instagram.com') #[i.fa-brands.fa-instagram]
+                      li
+                        a(href='https://www.twitter.com') #[i.fa-brands.fa-twitter]
+                .descreption
+                  h5 Hakim Dodo
+                  p.sm Back-end Developer
+            .col-12.col-md-6.col-xl-4
+              .tank.tank-5
+                .box-img
+                  .social-media
+                    ul.list-unstyled
+                      li 
+                        a(href='https://www.facebook.com') #[i.fa-brands.fa-facebook]
+                      li 
+                        a(href='https://www.instagram.com') #[i.fa-brands.fa-instagram]
+                      li
+                        a(href='https://www.twitter.com') #[i.fa-brands.fa-twitter]
+                .descreption
+                  h5 marsten bill
+                  p.sm Prodect Manager
+            .col-12.col-md-6.col-xl-4
+              .tank.tank-6
+                .box-img
+                  .social-media
+                    ul.list-unstyled
+                      li 
+                        a(href='https://www.facebook.com') #[i.fa-brands.fa-facebook]
+                      li 
+                        a(href='https://www.instagram.com') #[i.fa-brands.fa-instagram]
+                      li
+                        a(href='https://www.twitter.com') #[i.fa-brands.fa-twitter]
+                .descreption
+                  h5 Khaled Mabrouki
+                  p.sm Front-end Developer
+      .sponsors
+        .container.col-10
+          +main_title_3('Sponsors', 'Amazing Partners & Sponsors')
+          .tank.tank-1
+            h6.text-uppercase.pb-4 gold sponsors
+            ul.list-unstyled.pb-4
+              each img in ['https://demo.themefisher.com/vixcon/images/clients/client-img-1.png', 'https://demo.themefisher.com/vixcon/images/clients/client-img-2.png', 'https://demo.themefisher.com/vixcon/images/clients/client-img-3.png', 'https://demo.themefisher.com/vixcon/images/clients/client-img-4.png', 'https://demo.themefisher.com/vixcon/images/clients/client-img-5.png']
+                li #[img(src=img class='img-fluid')]
+          .tank.tank-2.pb-2
+            h6.text-uppercase.pb-4.pt-5 platinum sponsors
+            ul.list-unstyled
+              each imgs in ['https://demo.themefisher.com/vixcon/images/clients/client-img-5.png', 'https://demo.themefisher.com/vixcon/images/clients/client-img-6.png', 'https://demo.themefisher.com/vixcon/images/clients/client-img-2.png', 'https://demo.themefisher.com/vixcon/images/clients/client-img-1.png', 'https://demo.themefisher.com/vixcon/images/clients/client-img-3.png', 'https://demo.themefisher.com/vixcon/images/clients/client-img-2.png','https://demo.themefisher.com/vixcon/images/clients/client-img-7.png','https://demo.themefisher.com/vixcon/images/clients/client-img-8.png','https://demo.themefisher.com/vixcon/images/clients/client-img-9.png']
+                li #[img(src=imgs class='img-fluid')]
+          h4.pt-4.pb-3.text-white want to be a sponsor?
+          +main_btn_2('aplly now')
+      .news
+        .container.col-10
+          +main_title_1('news', 'latest news updated', 'Accusantium provident suscipit dicta magni dolor deserunt nam obcaecati non veritatis optio.')
+          .row.justify-content-center
+            .col-12.col-md-6.col-xl-4
+              .box
+                .img-box
+                  img(class='img-fluid' src='https://demo.themefisher.com/vixcon/images/blog/blog-img-1.jpg')
+                .text
+                  h5 Why lead generation is key for business growth
+                  p.sm Illum delectus quidem nobis, impedit soluta mollitia dignissimos error.
+                  a(href='/Html/dist/Blog.html') read more #[i.fa-solid.fa-angle-right.ps-1]
+            .col-12.col-md-6.col-xl-4
+              .box
+                .img-box
+                  img(class='img-fluid' src='https://demo.themefisher.com/vixcon/images/blog/blog-img-2.jpg')
+                .text
+                  h5 Why lead generation is key for business growth
+                  p.sm Illum delectus quidem nobis, impedit soluta mollitia dignissimos error.
+                  a(href='/Html/dist/Blog.html') read more #[i.fa-solid.fa-angle-right.ps-1]
+            .col-12.col-md-6.col-xl-4
+              .box
+                .img-box
+                  img(class='img-fluid' src='https://demo.themefisher.com/vixcon/images/blog/blog-img-3.jpg')
+                .text
+                  h5 Why lead generation is key for business growth
+                  p.sm Illum delectus quidem nobis, impedit soluta mollitia dignissimos error.
+                  a(href='/Html/dist/Blog.html') read more #[i.fa-solid.fa-angle-right.ps-1]
+    include ./Layout/Footer
+  include Helpers/JavascriptLinks
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
